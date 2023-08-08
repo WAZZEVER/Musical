@@ -12,6 +12,13 @@ function onYouTubeIframeAPIReady() {
     width: '100%',
     videoId: '7Y6QW8Fj8-o',
     playerVars: {
+      'autoplay': 1,         // Autoplay the video
+      'controls': 0,         // Hide video controls
+      'disablekb': 1,        // Disable keyboard controls
+      'fs': 0,               // Disable fullscreen option
+      'modestbranding': 1,   // Hide YouTube logo
+      'playsinline': 1,      // Play inline on mobile devices
+      'showinfo': 0,         // Hide video information
     },
     events: {
       'onReady': onPlayerReady,
