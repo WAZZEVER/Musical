@@ -121,6 +121,8 @@ window.onload = () => {
   
     window.location.reload()
   }
+
+
   
 function mineManually() {
   console.log("!")
@@ -172,3 +174,22 @@ function populateDropdown(data) {
     dropdownContent.appendChild(dropdownItem);
   });
 }
+
+function fire() {
+  db.collection('music')
+    .orderBy('musictime', 'desc')
+    .limit(10)
+    .get()
+    .then((querySnapshot) => {
+      if (!querySnapshot.empty) {
+        populateDropdown(querySnapshot.docs);
+      } else {
+        console.log('No documents found in the collection.');
+      }
+    })
+    .catch((error) => {
+      console.error('Error getting documents:', error);
+    });
+}
+
+fire();
