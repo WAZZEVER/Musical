@@ -9,7 +9,7 @@ var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '700',
-    width: '140%',
+    width: '100%',
     videoId: '7Y6QW8Fj8-o',
     playerVars: {
       'autoplay': 1,
