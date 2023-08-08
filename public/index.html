@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Musical</title>
+</head>
+<nav class="navbar is-success" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      <h1 class="is-size-2">Wazz</h1>
+    </a>
+
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  
+    
+    <div class="navbar-menu" id="navMenu">    
+      <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="dropdown" onclick="toggleDropdown()">
+          <div class="dropdown-trigger">
+            <button  class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+              <span>Leaderboard</span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+            <div class="dropdown-content" id="dropdown-content">
+            </div>
+          </div>          
+        </div>
+        <div class="buttons">
+          <a class="button is-light" id="logindis" style="display: none;" href="https://discord.com/api/oauth2/authorize?client_id=907200465467494400&redirect_uri=http%3A%2F%2Flocalhost%3A8888&response_type=token&scope=identify">
+            Log in
+          </a>
+          <a class="button is-light" id="logoutdis" onclick="logout()">
+            Log out
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+
+      <div class="box background" id="zonemusic">
+        <div class="episodes">
+    <div id="player"></div>
+  </div>
+    </div>
+<br>
+  <div class="box background" id="zone1">
+    <h1 id="middleside" class="is-size-3">Profile</h1>
+    <div class="user-profile">
+      <img id="avatar" src="https://th.bing.com/th/id/OIP.iFGXeW9rLrvUVrP729ZewQHaHa?pid=ImgDet&rs=1" alt="User Avatar">   
+      <div class="user-details">
+        <p id="name" class="is-size-5">Unknown</p>
+        <p id="musictime" class="is-size-5">Music Listened: 0</p>
+      </div>
+    </div>
+      </div>
+</div>
+</section>  
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="dis.js"></script>
+    <script src="dropdown.js"></script>
+    <script src="youtube.js"></script>
+
+</body>
+</html>
