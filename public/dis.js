@@ -125,15 +125,17 @@ window.onload = () => {
 
   
 function mineManually() {
-  console.log("!")
+  console.log("!");
   if (disin) {
-    console.log("!")
+    console.log("!");
     db.collection('music').doc(ididscordid).get()
       .then((doc) => {
         if (doc.exists) {
           const data = doc.data();
           const incrementValue = 1;
-          const newTokenCount = data.musictime + incrementValue;
+          const currentMusictime = data.musictime || 0;
+          const newTokenCount = currentMusictime + incrementValue;
+          
           db.collection('music').doc(ididscordid).set({
             musictime: newTokenCount
           }, { merge: true })
@@ -148,6 +150,12 @@ function mineManually() {
           db.collection('music').doc(ididscordid).set({
             musictime: incrementValue
           }, { merge: true })
+          .then(() => {
+            console.log('Document successfully created!');
+          })
+          .catch((error) => {
+            console.error('Error creating document:', error);
+          });
         }
       })
       .catch((error) => {
