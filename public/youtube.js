@@ -12,13 +12,13 @@ function onYouTubeIframeAPIReady() {
     width: '100%',
     videoId: '7Y6QW8Fj8-o',
     playerVars: {
-      'autoplay': 1,         // Autoplay the video
-      'controls': 0,         // Hide video controls
-      'disablekb': 1,        // Disable keyboard controls
-      'fs': 0,               // Disable fullscreen option
-      'modestbranding': 1,   // Hide YouTube logo
-      'playsinline': 1,      // Play inline on mobile devices
-      'showinfo': 0,         // Hide video information
+      'autoplay': 1,         
+      'controls': 0,      
+      'disablekb': 1,       
+      'fs': 0,              
+      'modestbranding': 1,  
+      'playsinline': 1,     
+      'showinfo': 0,      
     },
     events: {
       'onReady': onPlayerReady,
@@ -33,13 +33,31 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {
   var state = player.getPlayerState();
   console.log("Player state: " + state);
-  if (state == "0") {
+  const progressBar = document.querySelector('.progress');
+const totalTime = 180;
+let currentTime = 0;
+
+function updateProgressBar() {
+    currentTime++;
+    const progressPercent = (currentTime / totalTime) * 100;
+    progressBar.value = progressPercent;
+    progressBar.textContent = `${progressPercent.toFixed(0)}%`;
+
+    if (currentTime < totalTime) {
+        setTimeout(updateProgressBar, 1000); 
+    }
+}
+
+updateProgressBar();
+  if (state == "0"){
     mineManually()
-    alert("Ended, After you pressed ok page will reload after 5 seconds!")
-    setTimeout(function() {
-      location.reload();
-    }, 5000);
-  } else if (state == "2") {
-    alert("Pls unpause the video!");
+    alert("Ended, After you pressed ok page will reload after 10 seconds!")
+  setTimeout(function() {
+    location.reload();
+  }, 10000);      
+  } else if (state == "2"){
+    alert("Pls unpause the video!")
   }
 }
+
+
