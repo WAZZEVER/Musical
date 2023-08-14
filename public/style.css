@@ -14,7 +14,7 @@ body{
 }
 
 #zone1 {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 85%;
     margin: 0 auto;
     background-image: url("https://images.hdqwalls.com/wallpapers/bthumb/blue-forest-minimal-4k-kz.jpg");
@@ -27,21 +27,19 @@ body{
     font-weight: bold;
 }
 
-
-#zone1::before {
-    content: ' ';
-    font-weight: bold;
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-#zone1::after {
-    content: ' ';
-    font-weight: bold;
-}
 
 #zone2{
-    margin-top: 30px;
     width: 70%;
     margin: 0 auto;
+    background-color: transparent;
 
 }
 
@@ -50,7 +48,7 @@ body{
 }
 
 .hero {
-height: 120vh;
+height: 140vh;
 }
 
 .dropdown {
