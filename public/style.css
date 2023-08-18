@@ -1,50 +1,48 @@
-.hide-mouse-cursor {
-    cursor: none;
-}
+
 
 body{
-      font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif;
 }
 
 #zonemusic{
-    margin-top: 30px;
-    width: 95%;
-    margin: 0 auto;
-    outline: 5px solid #9dcf26;
+  margin-top: 30px;
+  width: 95%;
+  margin: 0 auto;
+  outline: 5px solid #9dcf26;
 }
 
 #zone1 {
-    margin-top: 10px;
-    width: 85%;
-    margin: 0 auto;
-    background-image: url("https://images.hdqwalls.com/wallpapers/bthumb/blue-forest-minimal-4k-kz.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(128, 171, 130, 0.8);
-    color: white;
-    outline: 5px solid #ffffff;
-    font-weight: bold;
+  margin-top: 10px;
+  width: 85%;
+  margin: 0 auto;
+  background-image: url("https://images.hdqwalls.com/wallpapers/bthumb/blue-forest-minimal-4k-kz.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(128, 171, 130, 0.8);
+  color: white;
+  outline: 5px solid #ffffff;
+  font-weight: bold;
 }
 
 .iframe-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 
 #zone2{
-    width: 70%;
-    margin: 0 auto;
-    background-color: transparent;
+  width: 70%;
+  margin: 0 auto;
+  background-color: transparent;
 
 }
 
 .episodes {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .hero {
@@ -72,11 +70,11 @@ display: none;
 }
 
 .hero {
-    background-color: #80AB82;
-    background-image: url("https://wallpaperaccess.com/full/812553.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-color: #80AB82;
+  background-image: url("https://wallpaperaccess.com/full/812553.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -127,21 +125,42 @@ margin-top: 50px;
 }
 
 .footer{
-    background-image: url("https://i.pinimg.com/originals/61/ee/a1/61eea19016526c5f0920b5ac39761007.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(128, 171, 130, 0.8);
-    color: white;
-    font-weight: bold;
+  background-image: url("https://i.pinimg.com/originals/61/ee/a1/61eea19016526c5f0920b5ac39761007.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(128, 171, 130, 0.8);
+  color: white;
+  font-weight: bold;
 }
 
 .navbar{
-    background-image: url("https://th.bing.com/th/id/OIP.PHGpRCZHVJySGha12Zgw_QHaEK?pid=ImgDet&rs=1");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(128, 171, 130, 0.8);
-    color: white;
-    font-weight: bold;
+  background-image: url("https://th.bing.com/th/id/OIP.PHGpRCZHVJySGha12Zgw_QHaEK?pid=ImgDet&rs=1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(128, 171, 130, 0.8);
+  color: white;
+  font-weight: bold;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#message-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
